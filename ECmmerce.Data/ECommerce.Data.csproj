@@ -59,6 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Infrasctructure\DatabaseFactory.cs" />
+    <Compile Include="Infrasctructure\Disposable.cs" />
+    <Compile Include="Infrasctructure\IDatabaseFactory.cs" />
+    <Compile Include="Infrasctructure\IRepository.cs" />
+    <Compile Include="Infrasctructure\RepositoryBase.cs" />
     <Compile Include="Models\address.cs" />
     <Compile Include="Models\category.cs" />
     <Compile Include="Models\commision.cs" />
@@ -105,6 +110,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
