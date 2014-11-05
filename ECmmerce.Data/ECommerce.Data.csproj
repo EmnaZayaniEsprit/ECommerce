@@ -59,6 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Infrasctructure\DatabaseFactory.cs" />
+    <Compile Include="Infrasctructure\Disposable.cs" />
+    <Compile Include="Infrasctructure\IDatabaseFactory.cs" />
+    <Compile Include="Infrasctructure\IRepository.cs" />
+    <Compile Include="Infrasctructure\IUnitOfWork.cs" />
+    <Compile Include="Infrasctructure\RepositoryBase.cs" />
+    <Compile Include="Infrasctructure\UnitOfWork.cs" />
     <Compile Include="Repositories\GouvernoratRepository.cs" />
     <Compile Include="Repositories\OrderItemRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
