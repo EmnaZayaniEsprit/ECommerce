@@ -59,12 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Infrastructure\DatabaseFactory.cs" />
-    <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Repositories\GouvernoratRepository.cs" />
-    <Compile Include="Infrastructure\IDatabaseFactory.cs" />
-    <Compile Include="Infrastructure\IRepository.cs" />
-    <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Repositories\OrderItemRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\PictureRepository.cs" />
@@ -74,10 +69,8 @@
     <Compile Include="Repositories\PromotionRepository.cs" />
     <Compile Include="Repositories\ReclamationRepository.cs" />
     <Compile Include="Repositories\RecommendationRepository.cs" />
-    <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Repositories\ReviewRepository.cs" />
     <Compile Include="Repositories\ShoppingCartRepository.cs" />
-    <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Models\address.cs" />
     <Compile Include="Models\category.cs" />
