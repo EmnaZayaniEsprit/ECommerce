@@ -63,7 +63,9 @@
     <Compile Include="Infrasctructure\Disposable.cs" />
     <Compile Include="Infrasctructure\IDatabaseFactory.cs" />
     <Compile Include="Infrasctructure\IRepository.cs" />
+    <Compile Include="Infrasctructure\IUnitOfWork.cs" />
     <Compile Include="Infrasctructure\RepositoryBase.cs" />
+    <Compile Include="Infrasctructure\UnitOfWork.cs" />
     <Compile Include="Models\address.cs" />
     <Compile Include="Models\category.cs" />
     <Compile Include="Models\commision.cs" />
