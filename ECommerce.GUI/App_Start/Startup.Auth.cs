@@ -28,9 +28,9 @@ namespace ECommerce.GUI
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+              appId: "1493528244257555",
+              appSecret: "9d4125879c02db8efb200a1b98a1eea0");
 
             //app.UseGoogleAuthentication();
         }
