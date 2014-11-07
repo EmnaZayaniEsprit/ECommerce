@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using ECommerce.GUI.Models;
+using System.IO;
 
 namespace ECommerce.GUI.Controllers
 {
@@ -78,11 +79,15 @@ namespace ECommerce.GUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new ApplicationUser() { UserName = model.UserName, email = model.email, sexe=model.sexe, picture=model.picture };
                 var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+                HttpPostedFileBase file = TempData["Image"] as HttpPostedFileBase;
+                if (result.Succeeded && file.ContentLength > 0)
                 {
+                    
                     await SignInAsync(user, isPersistent: false);
+                    var path = Path.Combine(Server.MapPath("~/Content/Upload"), user.picture);
+                    file.SaveAs(path);
                     return RedirectToAction("Index", "Home");
                 }
                 else

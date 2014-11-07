@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace ECommerce.GUI.Models
 {
@@ -31,7 +32,7 @@ namespace ECommerce.GUI.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "Login")]
         public string UserName { get; set; }
 
         [Required]
@@ -46,7 +47,7 @@ namespace ECommerce.GUI.Models
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "Login")]
         public string UserName { get; set; }
 
         [Required]
@@ -59,5 +60,27 @@ namespace ECommerce.GUI.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "First name")]
+        public string firstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last name")]
+        public string lastName { get; set; }
+
+        [Required]
+        [Display(Name = "Sexe")]
+        public string sexe { get; set; }
+
+        [Required]
+        [Display(Name = "E-mail")]
+        [DataType(DataType.EmailAddress,ErrorMessage = "Please enter a valid mail address")]
+        public string email { get; set; }
+
+  
+        [DataType(DataType.ImageUrl)]
+        [Display(Name = "Image")]
+        public string picture { get; set; }
     }
 }

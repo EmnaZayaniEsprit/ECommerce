@@ -17,18 +17,59 @@
             @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
         </div>
     </div>
-    <div class="form-group">
+    
+     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
         </div>
     </div>
+    
     <div class="form-group">
         @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
         </div>
     </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.firstName, new { @class = "col-md-2 control-label" }) 
+            <div class="col-md-10">
+                 @Html.TextBoxFor(m => m.firstName, new { @class = "form-control" }) 
+            </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.lastName, new { @class = "col-md-2 control-label" }) 
+            <div class="col-md-10">
+                 @Html.TextBoxFor(m => m.lastName, new { @class = "form-control" }) 
+            </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.email, new { @class = "col-md-2 control-label" }) 
+            <div class="col-md-10">
+                 @Html.TextBoxFor(m => m.email, new { @class = "form-control" }) 
+            </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.sexe, new { @class = "col-md-2 control-label" }) 
+            <div class="col-md-10">
+                 @Html.TextBoxFor(m => m.sexe, new { @class = "form-control" }) 
+            </div>
+    </div>
+    
+     <div class="form-group">
+        @Html.LabelFor(m => m.picture, new { @class = "col-md-2 control-label" }) 
+            <div class="col-md-10">
+                @Html.Editor("file", new { htmlAttributes = new { @class = "form-control", type = "file" } })
+            </div>
+    </div>
+    
+   
+    
+   
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Register" />
