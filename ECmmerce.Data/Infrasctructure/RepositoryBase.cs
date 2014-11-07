@@ -39,6 +39,25 @@ namespace ECmmerce.Data.Infrasctructure
             dbset.Remove(entity); 
         }
 
-        public virtual void Delete(Expression<Func<T, bool>> where) { IEnumerable<T> objects = dbset.Where<T>(where).AsEnumerable(); foreach (T obj in objects) dbset.Remove(obj); } public virtual T GetById(long id) { return dbset.Find(id); } public virtual T GetById(string id) { return dbset.Find(id); } public virtual IEnumerable<T> GetAll() { return dbset.ToList(); } public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where) { return dbset.Where(where).ToList(); } public T Get(Expression<Func<T, bool>> where) { return dbset.Where(where).FirstOrDefault<T>(); }
+        public virtual void Delete(Expression<Func<T, bool>> where) { 
+            IEnumerable<T> objects = dbset.Where<T>(where).AsEnumerable(); foreach (T obj in objects) dbset.Remove(obj); 
+        } 
+        
+        public virtual T GetById(long id) { 
+          return dbset.Find(id); } 
+        
+        public virtual T GetById(string id) { 
+            return dbset.Find(id); } 
+        public virtual IEnumerable<T> GetAll() { 
+            return dbset.ToList(); 
+        }
+        
+        public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where) { 
+            return dbset.Where(where).ToList(); 
+        } 
+        
+        public T Get(Expression<Func<T, bool>> where) { 
+            return dbset.Where(where).FirstOrDefault<T>(); 
+        }
     }
 }
